@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dq1pn1633dyu3"]
+
+[ext_resource type="Script" uid="uid://del0lw0caw2h8" path="res://scripts/Character.gd" id="1_53v7d"]
+[ext_resource type="Texture2D" uid="uid://baxy0vtlajldd" path="res://assets/idleside2.png" id="2_apuoc"]
+[ext_resource type="Texture2D" uid="uid://csahbsqi5fx63" path="res://assets/charactermovementright.png" id="3_rguqb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pry4r"]
+atlas = ExtResource("2_apuoc")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwsyb"]
+atlas = ExtResource("2_apuoc")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25pii"]
+atlas = ExtResource("3_rguqb")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exdhi"]
+atlas = ExtResource("3_rguqb")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r87yu"]
+atlas = ExtResource("3_rguqb")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfeyu"]
+atlas = ExtResource("3_rguqb")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r68wp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pry4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwsyb")
+}],
+"loop": true,
+"name": &"side_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25pii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exdhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r87yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfeyu")
+}],
+"loop": true,
+"name": &"side_move",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2085190962]
+script = ExtResource("1_53v7d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1646786084]
+sprite_frames = SubResource("SpriteFrames_r68wp")
+animation = &"side_idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=121603740]
+polygon = PackedVector2Array(-6, -12, -5, -12, -5, -13, -4, -13, -4, -14, 3, -14, 3, -13, 5, -13, 5, -12, 6, -12, 6, -9, 7, -9, 7, -2, 4, 1, 2, 2, 6, 4, 6, 12, 3, 13, 3, 23, -3, 23, -3, 13, -6, 11, -6, 4, -3, 1, -5, -1, -6, -5)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1139139872]
+zoom = Vector2(2, 2)
