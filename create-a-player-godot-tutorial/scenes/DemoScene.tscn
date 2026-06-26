@@ -160,12 +160,21 @@ position = Vector2(1152.25, 650)
 shape = SubResource("RectangleShape2D_dh2vi")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1303487280]
-position = Vector2(-1141, 319.5)
+position = Vector2(-329, 322)
 shape = SubResource("RectangleShape2D_ja23o")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=963501271]
-position = Vector2(3440, 335)
+position = Vector2(2318, 326)
 shape = SubResource("RectangleShape2D_ja23o")
 
 [node name="CharacterBody2D" parent="." unique_id=2085190962 instance=ExtResource("8_ja23o")]
 position = Vector2(446, 590)
+
+[node name="Label" type="Label" parent="." unique_id=1903060928]
+offset_left = 235.00002
+offset_top = 460.00003
+offset_right = 1199.0
+offset_bottom = 527.0
+scale = Vector2(0.455, 0.455)
+theme_override_font_sizes/font_size = 48
+text = "How To Create A Working Player In Godot"

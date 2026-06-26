@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Create a Player Godot Tutorial"
+run/main_scene="uid://dj3hb7eys5riu"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
